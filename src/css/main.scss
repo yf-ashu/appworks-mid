@@ -1,0 +1,91 @@
+@mixin size($w,
+$h) {
+  width: $w;
+  height: $h;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'PingFangTC-Thin', 'Noto Sans', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  @include size(100%,
+  100%);
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+.header {
+  @include size(100%, 40px);
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  @include size(100%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: rgb(240, 240, 240);
+}
+
+.link:hover {
+  background-color: rgb(189, 189, 189);
+}
+
+.current {
+  background-color: rgb(184, 184, 184);
+
+}
+
+.home {
+  @include size(100%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  @include size(50%, 100%);
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.main {
+  position: relative;
+}
+.cell{
+  position: absolute;
+    width: 101px;
+    height: 101px;
+    line-height: 101px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px outset #888888;
+    z-index: 2;
+    transition: left 0.5s, top 0.5s;
+    cursor: pointer;
+}
+.correct{
+  .cell{
+    background-color:greenyellow;
+  }
+}
+.rank{
+
+}
+.Ranktext{
+  @include size(100%, 100%);
+
+}
